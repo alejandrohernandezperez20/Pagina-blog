@@ -73,7 +73,7 @@ function AbrirDetalles() {
 
 function VueltaAlIndex() {
     $("#logo").click(function () {
-        window.location = "Index.html";
+        window.location = "index.html";
     });
 }
 
