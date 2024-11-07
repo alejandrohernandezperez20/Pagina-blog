@@ -1,0 +1,24 @@
+body{
+    background-color: rgb(182, 182, 207);
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#titulo{
+        color: rgb(32, 26, 26);
+        font-family: monospace;
+    }
+a{
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+}
+
+a:hover{
+    color: rgb(108, 255, 157);
+}
+
+.imagen{
+    width: 150px;
+    height: 150px;
+    margin-left: 5px;
+}

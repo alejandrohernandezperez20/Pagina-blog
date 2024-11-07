@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<link rel="stylesheet" href="./css/blog.css">
+<script type="text/javascript" src="./js/blog.js">
+</script>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-danger bg-danger fixed-top">
+        <a class="navbar-brand" href="#">
+            <img id="logo" src="./img/logo/extra_software_logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        </a>
+    </nav>
+    <h1 id="titulo" class="text-success">Blog de Noticias</h1>
+    <div id="dialog-form" title="Crear nueva noticia">
+        <p>Todos los campos son obligatorios.</p>
+        <div style="margin-bottom:10px;">
+            <label for="nombre_dialogo">Nombre:</label>
+            <input type="text" class="text ui-widget-content ui-corner-all" id="nombre_dialogo" placeholder="Introduce nombre">        
+        </div>
+        <div style="margin-bottom:10px;">
+            <label for="descripcion_dialogo">Descripcion:</label>
+            <input type="text" class="text ui-widget-content ui-corner-all"  id="descripcion_dialogo" placeholder="Introduce descripcion">
+        </div>
+        <div style="margin-bottom:10px;">
+            <label for="fecha_dialogo">Fecha</label>
+            <input type="date" class="form-control " id="fecha_dialogo">
+        </div>
+    </div>
+    <div class="row">
+    <div class="formulario_historia col-xl-4  col-md-6 col-6">
+        <form>
+            <label id="formulario_titulo">Noticia Nueva</label>
+            <div class="form-group row">
+                <label for="nombre" class="col-sm-3 col-xl-2 col-form-label">Nombre</label>
+                <div class="offset-xl-1 col-md-9 col-sm-9 col-xl-7">
+                  <input type="text" class="form-control" id="nombre" placeholder="Introduce nombre">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="descripcion" class="col-sm-3 col-xl-2 col-form-label">Descripcion</label>
+                <div class="offset-xl-1 col-md-9 col-sm-9 col-xl-7">
+                  <input type="text" class="form-control" id="descripcion" placeholder="Introduce descripcion">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="fecha" class="col-sm-3 col-xl-2 col-form-label">Fecha</label>
+                <div class="offset-xl-1  col-md-9 col-sm-9 col-xl-7">
+                    <input type="date" class="form-control " id="fecha">
+                </div>
+            </div>
+            <br>
+            <button id="guardar" class="btn btn-success mb-2">Guardar</button>
+        </form>
+    </div>
+    <div class="col-xl-2 col-md-4 col-3">
+        <button id="btndialogo" class="btn btn-success mb-2" onclick="nuevaNoticia()">Crear Nueva noticia</button>
+    </div>
+</div>
+    <div id="caja_blog" class="mb-4">
+        <div class="form-group row mt-3">
+            <div class="col-7 col-sm-5 col-md-6 caja_fitlro">
+                <select  class="form-control" id="filtro">
+                    <option>selecciona uno</option>
+                    <option value="1">Mas reciente</option>
+                    <option value="2">Menos reciente</option>
+                </select>
+            </div>
+        </div>
+        <div id="blog" class="row">
+
+        </div>
+    </div>
+
+    <div id="caja_informacion" class="mb-4">
+        <div id="detalle">
+
+        </div>
+    </div>
+</body>
+</html>
